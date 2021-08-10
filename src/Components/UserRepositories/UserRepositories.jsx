@@ -70,7 +70,7 @@ const UserRepositories = () => {
     if (target.value.length >= 1) {
       setFilter(
         repositories.filter(({ tags }) => {
-          return tags.find((tag) => tag === target.value);
+          return tags.find((tag) => tag.includes(target.value));
         })
       );
     } else return setFilter(repositories);
