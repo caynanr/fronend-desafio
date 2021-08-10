@@ -9,7 +9,7 @@ const Header = ({ button }) => {
     <header className={styles.header}>
       <Github className={styles.logo} />
       {button ? (
-        <Link to="/registrar" className={styles.link}>
+        <Link to="/registrar/true" className={styles.link}>
           Adicionar novo
         </Link>
       ) : (

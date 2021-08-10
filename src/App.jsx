@@ -13,7 +13,7 @@ function App() {
           <Routes>
             <Route path="/" end element={<UserRegister />} />
             <Route path="usuarios/" element={<Users />} />
-            <Route path="/registrar" element={<UserRegister />} />
+            <Route path="/registrar/:id" element={<UserRegister />} />
             <Route path="usuario/:id" element={<UserRepositories />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

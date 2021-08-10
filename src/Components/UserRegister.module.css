@@ -17,6 +17,15 @@
   margin-top: 2rem;
 }
 
+.arrowBack {
+  position: absolute;
+  top: 20%;
+  left: 4%;
+  width: 20px;
+  height: 20px;
+  background: url("../Assets/arrow_back_black.svg") no-repeat center center;
+}
+
 .logo {
   margin-bottom: 5.5rem;
   align-self: flex-start;
@@ -85,6 +94,14 @@
     padding: 0;
     width: 90%;
     height: auto;
+  }
+  .arrowBack {
+    position: absolute;
+    top: 40px;
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    background: url("../Assets/arrow_back_black.svg") no-repeat center center;
   }
 
   .logo {

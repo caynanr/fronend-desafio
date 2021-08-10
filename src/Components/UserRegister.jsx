@@ -7,12 +7,14 @@ import { ReactComponent as AccountCircle } from "../Assets/account_circle.svg";
 import { ReactComponent as Background } from "../Assets/bg.svg";
 import { ReactComponent as Github } from "../Assets/logo.svg";
 import Error from "../Helper/Error";
+import { Link, useParams } from "react-router-dom";
 
 const UserRegister = () => {
   const [userName, setUserName] = React.useState("");
   const [users, setUsers] = React.useState([]);
   const [error, setError] = React.useState(null);
   const navigate = useNavigate();
+  const { id } = useParams();
 
   React.useEffect(() => {
     const getUsers = JSON.parse(window.localStorage.getItem("users"));
@@ -45,6 +47,9 @@ const UserRegister = () => {
     <div className={styles.register}>
       <div className={styles.form}>
         <div className={styles.titles}>
+          {id === "true" && (
+            <Link to="/usuarios" className={styles.arrowBack}></Link>
+          )}
           <Github className={styles.logo} />
           <h1 className="title">Buscar Usuário</h1>
           <p className={styles.subtitle}>
