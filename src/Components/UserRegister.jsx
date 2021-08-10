@@ -5,7 +5,7 @@ import Input from "./Forms/Input";
 import Button from "./Forms/Button";
 import { ReactComponent as AccountCircle } from "../Assets/account_circle.svg";
 import { ReactComponent as Background } from "../Assets/bg.svg";
-import { ReactComponent as Github } from "../Assets/logo.svg";
+import { ReactComponent as Github } from "../Assets/logo_home.svg";
 import Error from "../Helper/Error";
 import { Link, useParams } from "react-router-dom";
 
@@ -50,7 +50,8 @@ const UserRegister = () => {
           {id === "true" && (
             <Link to="/usuarios" className={styles.arrowBack}></Link>
           )}
-          <Github className={styles.logo} />
+          {/* <Github className={styles.logo} /> */}
+          <p className={styles.logobg}></p>
           <h1 className="title">Buscar Usuário</h1>
           <p className={styles.subtitle}>
             Crie sua conta através do seu usuário do GitHub.

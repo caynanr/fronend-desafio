@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ReactComponent as Github } from "../Assets/logo.svg";
+import { ReactComponent as Github } from "../Assets/logo_header.svg";
 
 import styles from "./Header.module.css";
 

@@ -10,7 +10,7 @@
   align-items: flex-start;
   justify-content: center;
   grid-column: 1;
-  padding: 0rem 5rem 0rem 1rem;
+  padding: 0rem 7rem 0rem 3rem;
   position: relative;
 }
 .form form > * {
@@ -20,15 +20,17 @@
 .arrowBack {
   position: absolute;
   top: 20%;
-  left: 4%;
+  left: 8%;
   width: 20px;
   height: 20px;
   background: url("../Assets/arrow_back_black.svg") no-repeat center center;
 }
 
-.logo {
+.logobg {
   margin-bottom: 5.5rem;
-  align-self: flex-start;
+  width: 226.31px;
+  height: 100px;
+  background: url("../Assets/logo_home.svg") no-repeat center center;
 }
 
 .titles {
@@ -98,19 +100,23 @@
   .arrowBack {
     position: absolute;
     top: 40px;
-    left: 10%;
+    left: 5%;
     width: 20px;
     height: 20px;
     background: url("../Assets/arrow_back_black.svg") no-repeat center center;
   }
 
-  .logo {
-    margin-bottom: 2.5rem;
+  .logobg {
+    margin: 0 auto;
   }
 
   .titles {
     width: 100%;
     text-align: center;
+  }
+
+  .titles > h1 {
+    margin-top: 2rem;
   }
   .formGroup {
     width: 100%;
