@@ -1,0 +1,42 @@
+.tag {
+  background: rgba(0, 0, 0, 0.08);
+  margin-right: 0.5rem;
+  border-radius: 100px;
+  text-align: center;
+  padding: 3px 1rem;
+  font-family: var(--type-first);
+  font-size: 1rem;
+}
+
+.btnTag {
+  border-radius: 100px;
+  text-align: center;
+  padding: 3px 1rem;
+  border: none;
+  font-family: var(--type-first);
+  font-size: 1rem;
+  color: #0017ff;
+  background: rgba(0, 23, 255, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btnEdit::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  display: block;
+  margin-left: 0.5rem;
+  background: url("../../../Assets/edit.svg") no-repeat center center;
+}
+
+.btnAdd::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  display: block;
+  margin-left: 0.5rem;
+  background: url("../../../Assets/add.svg") no-repeat center center;
+}

@@ -1,0 +1,8 @@
+.users {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  width: 100%;
+  height: calc(100vh - 1rem);
+  background: #f8f8f8;
+}

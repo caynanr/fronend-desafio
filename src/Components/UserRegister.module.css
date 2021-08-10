@@ -1,0 +1,123 @@
+.register {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.form {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  grid-column: 1;
+  padding: 0rem 5rem 0rem 1rem;
+  position: relative;
+}
+.form form > * {
+  margin-top: 2rem;
+}
+
+.logo {
+  margin-bottom: 5.5rem;
+  align-self: flex-start;
+}
+
+.titles {
+  width: 100%;
+}
+.formGroup {
+  width: 100%;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #7e7e7e;
+}
+
+.termos {
+  color: #7e7e7e;
+  font-size: 1rem;
+  line-height: 1;
+  text-align: center;
+  display: block;
+  width: 90%;
+  position: absolute;
+  bottom: 8%;
+}
+
+.termos span {
+  text-decoration: underline;
+}
+
+.bg {
+  grid-column: 2 / 3;
+  background: #000;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg p {
+  color: #fff;
+  margin-top: 3rem;
+  font-family: var(--type-first);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.bg svg {
+  max-width: 100%;
+}
+
+@media (max-width: 55rem) {
+  .register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    padding: 0;
+  }
+  .form {
+    padding: 0;
+    width: 90%;
+    height: auto;
+  }
+
+  .logo {
+    margin-bottom: 2.5rem;
+  }
+
+  .titles {
+    width: 100%;
+    text-align: center;
+  }
+  .formGroup {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .termos {
+    color: #7e7e7e;
+    font-size: 1rem;
+    line-height: 1;
+    text-align: center;
+    display: block;
+    width: 90%;
+    position: absolute;
+    bottom: -15%;
+  }
+
+  .bg {
+    display: none;
+  }
+}

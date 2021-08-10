@@ -1,0 +1,172 @@
+.user {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #fff;
+  padding: 0.8rem 2rem;
+  margin: 0.5rem 0.5rem;
+  border-radius: 8px;
+}
+.name {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.titleUser {
+  display: flex;
+  align-items: center;
+}
+
+.titleUser::after {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: url("../Assets/keyboard_arrow_right.svg") no-repeat center center;
+  margin-left: 0.5rem;
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-right: 1rem;
+}
+
+.profile p {
+  margin-top: 0.5rem;
+}
+
+.buttonDelete {
+  background: #e8e8e8;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #e8e8e8;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  font-family: var(--type-first);
+  text-transform: unset;
+  color: #7e7e7e;
+  font-size: 0.75rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.company::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url("../Assets/business.svg") no-repeat center center;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.location::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url("../Assets/place.svg") no-repeat center center;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 55rem) {
+  .user {
+    display: flex;
+    width: 90%;
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0.5rem;
+    border-radius: 8px;
+  }
+  .name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .titleUser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+
+  .titleUser::after {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url("../Assets/keyboard_arrow_right.svg") no-repeat center
+      center;
+    margin-left: 0rem;
+  }
+
+  .profile img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+  }
+
+  .profile p {
+    margin-bottom: 1rem;
+    margin-top: 0rem;
+  }
+
+  .buttonDelete {
+    background: #e8e8e8;
+    width: 100%;
+    height: 34px;
+    border-radius: 8px;
+    border: 1px solid #e8e8e8;
+    box-shadow: none;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  .details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--type-first);
+    text-transform: unset;
+    color: #7e7e7e;
+    font-size: 0.75rem;
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .company::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url("../Assets/business.svg") no-repeat center center;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .location::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url("../Assets/place.svg") no-repeat center center;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+}

@@ -1,0 +1,60 @@
+.cardAbout {
+  width: 20rem;
+  border-radius: 8px;
+  background: #fff;
+  margin-top: 1rem;
+  padding: 2rem;
+}
+
+.cardAbout h1 {
+  margin-bottom: 1rem;
+}
+
+.cardAbout p {
+  width: 100%;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.company::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../../Assets/business_black.svg") no-repeat center center;
+  margin-right: 0.5rem;
+}
+
+.location::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../../Assets/place_black.svg") no-repeat center center;
+  margin-right: 0.5rem;
+}
+
+.blog::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../../Assets/link.svg") no-repeat center center;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 55rem) {
+  .cardAbout {
+    min-width: min(75vw, 400px);
+
+    margin-right: 1rem;
+    position: initial;
+    margin-top: 0;
+  }
+}

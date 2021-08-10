@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+body {
+  --type-first: "Mulish", Helvetica, Arial, sans-serif;
+  --type-second: "Roboto", Helvetica, Arial, sans-serif;
+  font-family: var(--type-first);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-family: var(--type-first);
+  font-weight: 700;
+}
+
+.App {
+  height: 100vh;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media (max-width: 55rem) {
+  .container {
+    max-width: 100%;
+    height: 100vh;
+  }
+
+  .title {
+    font-size: 1rem;
+    word-break: break-all;
+  }
+}
