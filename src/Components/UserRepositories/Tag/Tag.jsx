@@ -42,6 +42,7 @@ const Tag = ({ tags, addTag, deleteTag, index }) => {
         <TagModal
           tags={tagList}
           toogleModal={toogleModal}
+          modal={modal}
           setTagList={setTagList}
           deleteTag={deleteTag}
           addTag={addTag}

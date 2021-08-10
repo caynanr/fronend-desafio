@@ -6,6 +6,10 @@ import { ReactComponent as Search } from "../../../Assets/search.svg";
 const TagModal = ({ tags, toogleModal, deleteTag, addTag, index }) => {
   const [tagInput, setTagInput] = React.useState("");
 
+  function handleOutsideClick(event) {
+    if (event.target === event.currentTarget) toogleModal();
+  }
+
   function handleChange({ target }) {
     setTagInput(target.value);
   }
@@ -24,7 +28,7 @@ const TagModal = ({ tags, toogleModal, deleteTag, addTag, index }) => {
   }
 
   return (
-    <div className={styles.modalContainer}>
+    <div className={styles.modalContainer} onClick={handleOutsideClick}>
       <div className={styles.modal}>
         <h1 className="title">
           {tags.length > 0 ? "Editar tags" : "Adicionar tags"}
