@@ -8,8 +8,8 @@ const NotFound = () => {
     <div className={styles.background}>
       <Background />
       <h1 className={styles.mensagem}>Error: 404 - Página não encontrada.</h1>
-      <Link to="/" className={styles.home}>
-        Home
+      <Link to="/usuarios" className={styles.home}>
+        Usuários
       </Link>
     </div>
   );
