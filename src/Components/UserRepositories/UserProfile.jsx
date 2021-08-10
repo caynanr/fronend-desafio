@@ -1,10 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./UserProfile.module.css";
 
 const UserProfile = ({ user }) => {
   return (
     <div className={styles.cardProfile}>
       <div className={styles.picProfile}>
+        <Link to="/usuarios" className={styles.link}></Link>
         <img src={user.avatar_url} alt={user.name} />
       </div>
       <div className={styles.names}>

@@ -4,12 +4,20 @@
   background: #fff;
 }
 
+.link {
+  position: absolute;
+  left: 6%;
+  bottom: 60%;
+  width: 20px;
+  height: 20px;
+  background: url("../../Assets/arrow_back.svg") no-repeat center center;
+}
+
 .picProfile {
   width: 100%;
   height: 100px;
   background: #000;
   border-radius: 8px 8px 0px 0px;
-
   position: relative;
   display: flex;
   justify-content: center;
@@ -70,6 +78,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
   }
 
   .picProfile img {
@@ -79,6 +88,14 @@
     border-radius: 50%;
     position: initial;
     margin: 0;
+  }
+
+  .link {
+    position: absolute;
+    bottom: 65%;
+    width: 20px;
+    height: 20px;
+    background: url("../../Assets/arrow_back.svg") no-repeat center center;
   }
 
   .names {
