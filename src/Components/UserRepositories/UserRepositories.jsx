@@ -57,7 +57,7 @@ const UserRepositories = () => {
   function handleSearch({ target }) {
     setSearch(target.value);
     if (target.value.length >= 1) {
-      const arraySearch = filter.filter(function (repo) {
+      const arraySearch = repositories.filter(function (repo) {
         if (repo.name.includes(target.value)) return true;
         else return false;
       });
