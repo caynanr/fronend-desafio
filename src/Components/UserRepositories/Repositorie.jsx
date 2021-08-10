@@ -28,6 +28,7 @@ const Repositorie = ({
         <a href={html_url} target="_blank" rel="noreferrer">
           {name}
         </a>
+        <span className={styles.star}></span>
       </h1>
       <p className={styles.description}>{description}</p>
       <ul className={styles.tags}>

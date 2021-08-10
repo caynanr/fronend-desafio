@@ -13,6 +13,7 @@
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .titleRepositorie::after {
@@ -23,6 +24,15 @@
   background: url("../../Assets/keyboard_arrow_right.svg") no-repeat center
     center;
   margin-left: 0.5rem;
+}
+
+.star {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  background: url("../../Assets/fav.svg") no-repeat center center;
 }
 
 .description {
