@@ -125,8 +125,6 @@ const UserRepositories = () => {
                   index={index}
                   deleteTag={deleteTag}
                   addTag={addTag}
-                  repositories={repositories}
-                  filter={filter}
                 />
               ))}
           </ul>
