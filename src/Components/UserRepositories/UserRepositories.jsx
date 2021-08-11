@@ -16,7 +16,7 @@ const UserRepositories = () => {
   const [filter, setFilter] = React.useState([]);
   const [search, setSearch] = React.useState("");
   const [searchTag, setSearchTag] = React.useState("");
-  console.log(repositories);
+
   const { id } = useParams();
 
   const saveOnLocalStorage = React.useCallback(() => {
@@ -125,6 +125,8 @@ const UserRepositories = () => {
                   index={index}
                   deleteTag={deleteTag}
                   addTag={addTag}
+                  repositories={repositories}
+                  filter={filter}
                 />
               ))}
           </ul>

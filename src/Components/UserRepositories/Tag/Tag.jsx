@@ -14,21 +14,12 @@ const Tag = ({ tags, addTag, deleteTag, index }) => {
     setModal(!modal);
   }
 
-  // function deleteTag(i) {
-  //   tagList.splice(i, 1);
-  //   setTagList([...tagList]);
-  // }
-
-  // function addTag(tag) {
-  //   setTagList([...tagList, ...tag]);
-  //   toogleModal();
-  // }
-
   return (
     <>
       {tagList.map((t, i) => (
         <li className={styles.tag} key={i}>{`#${t}`}</li>
       ))}
+
       {tagList.length >= 1 ? (
         <button onClick={toogleModal} className={styles.btnTag}>
           Editar tags <span className={styles.btnEdit}></span>
@@ -38,6 +29,7 @@ const Tag = ({ tags, addTag, deleteTag, index }) => {
           Adicionar tags <span className={styles.btnAdd}></span>
         </button>
       )}
+
       {modal && (
         <TagModal
           tags={tagList}
