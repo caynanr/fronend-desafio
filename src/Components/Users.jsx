@@ -7,8 +7,7 @@ const Users = () => {
   const [users, setUsers] = React.useState([]);
 
   React.useEffect(() => {
-    const getUsers =
-      localStorage.users && JSON.parse(window.localStorage.getItem("users"));
+    const getUsers = JSON.parse(window.localStorage.getItem("users"));
     if (getUsers.length) setUsers(getUsers);
   }, []);
 
@@ -28,7 +27,7 @@ const Users = () => {
       <ul className={styles.users}>
         {users.map((user, index) => (
           <User
-            key={user.id}
+            kye={index}
             name={user.name}
             login={user.login}
             avatar={user.avatar_url}

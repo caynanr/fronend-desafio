@@ -2,7 +2,6 @@ import React from "react";
 import { useParams } from "react-router";
 import UserProfile from "./UserProfile";
 import UserAbout from "./UserAbout";
-// import UserHighlights from "./UserHighlights";
 import Repositorie from "./Repositorie";
 import Header from "../Header";
 import styles from "./UserRepositories.module.css";
@@ -17,12 +16,18 @@ const UserRepositories = () => {
   const [filter, setFilter] = React.useState([]);
   const [search, setSearch] = React.useState("");
   const [searchTag, setSearchTag] = React.useState("");
-
+  console.log(repositories);
   const { id } = useParams();
+
+  const saveOnLocalStorage = React.useCallback(() => {
+    if (repositories.length > 0)
+      window.localStorage.setItem(`${id}`, JSON.stringify(repositories));
+  }, [repositories, id]);
 
   React.useEffect(() => {
     setFilter(repositories);
-  }, [repositories]);
+    saveOnLocalStorage();
+  }, [repositories, saveOnLocalStorage]);
 
   React.useEffect(() => {
     async function getUser() {
@@ -33,26 +38,26 @@ const UserRepositories = () => {
     getUser();
   }, [id]);
 
-  const saveOnLocalStorage = React.useCallback(() => {
-    window.localStorage.setItem(`${id}`, JSON.stringify(repositories));
-  }, [repositories, id]);
-
   React.useEffect(() => {
     async function getRepo() {
-      const response = await fetch(user.repos_url);
+      const response = await fetch(`https://api.github.com/users/${id}/repos`);
       const json = await response.json();
       const data = json.map((i) => {
         return { ...i, ...{ tags: [] } };
       });
 
       setRepositories(data);
-      // setFilter(data);
     }
-    if (repositories && !repositories.length)
-      setRepositories(JSON.parse(window.localStorage.getItem(`${id}`)));
-    else if (repositories === null) getRepo();
-    else saveOnLocalStorage();
-  }, [user, repositories, id, saveOnLocalStorage]);
+    const reposLocal = JSON.parse(window.localStorage.getItem(`${id}`));
+
+    if (
+      reposLocal !== null &&
+      reposLocal.length > 0 &&
+      repositories.length === 0
+    )
+      setRepositories(reposLocal);
+    else if (repositories.length === 0) getRepo();
+  }, [repositories, id]);
 
   function handleSearch({ target }) {
     setSearch(target.value);
@@ -94,7 +99,6 @@ const UserRepositories = () => {
         <aside className={styles.profile}>
           <UserProfile user={user} />
           <UserAbout user={user} />
-          {/* <UserHighlights user={user} /> */}
         </aside>
         <div className={styles.container}>
           <div className={styles.inputs}>
@@ -116,7 +120,7 @@ const UserRepositories = () => {
             {filter &&
               filter.map((repo, index) => (
                 <Repositorie
-                  key={repo.id}
+                  key={index}
                   {...repo}
                   index={index}
                   deleteTag={deleteTag}
