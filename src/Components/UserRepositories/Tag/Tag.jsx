@@ -27,7 +27,7 @@ const Tag = ({ tags, addTag, deleteTag, index }) => {
   return (
     <>
       {tagList.map((t, i) => (
-        <li className={styles.tag}>{`#${t}`}</li>
+        <li className={styles.tag} key={i}>{`#${t}`}</li>
       ))}
       {tagList.length >= 1 ? (
         <button onClick={toogleModal} className={styles.btnTag}>
