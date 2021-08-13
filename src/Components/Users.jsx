@@ -27,7 +27,7 @@ const Users = () => {
       <ul className={styles.users}>
         {users.map((user, index) => (
           <User
-            kye={index}
+            key={user.id}
             name={user.name}
             login={user.login}
             avatar={user.avatar_url}

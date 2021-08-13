@@ -3,7 +3,7 @@ import Input from "../../Forms/Input";
 import styles from "./TagModal.module.css";
 import { ReactComponent as Search } from "../../../Assets/search.svg";
 
-const TagModal = ({ tags, toogleModal, deleteTag, addTag, index }) => {
+const TagModal = ({ tags, toogleModal, deleteTag, addTag, index, id }) => {
   const [tagInput, setTagInput] = React.useState("");
 
   function handleOutsideClick(event) {
@@ -14,16 +14,16 @@ const TagModal = ({ tags, toogleModal, deleteTag, addTag, index }) => {
     setTagInput(target.value);
   }
 
-  function handleClick(index) {
+  function handleClick(id) {
     if (tagInput.length >= 1) {
-      addTag(index, tagInput.split(","));
+      addTag(id, tagInput.split(","));
       setTagInput("");
       toogleModal();
     } else toogleModal();
   }
 
-  function handleDeleteTag(index, i) {
-    deleteTag(index, i);
+  function handleDeleteTag(id, i) {
+    deleteTag(id, i);
     tags.splice(i, 1);
   }
 
@@ -46,7 +46,7 @@ const TagModal = ({ tags, toogleModal, deleteTag, addTag, index }) => {
                 className={styles.tagsModal}
                 key={tag}
                 onClick={() => {
-                  handleDeleteTag(index, i);
+                  handleDeleteTag(id, i);
                 }}
               >
                 {tag}
@@ -58,7 +58,7 @@ const TagModal = ({ tags, toogleModal, deleteTag, addTag, index }) => {
         {/* <section>
         <h2>Sugestões</h2>
       </section> */}
-        <button onClick={() => handleClick(index)} className={styles.btnSalvar}>
+        <button onClick={() => handleClick(id)} className={styles.btnSalvar}>
           Salvar
         </button>
         <button onClick={() => toogleModal()} className={styles.btnCancelar}>
