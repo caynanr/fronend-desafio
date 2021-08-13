@@ -7,13 +7,13 @@ const Repositorie = ({
   html_url,
   description,
   language,
-  updated_at,
   created_at,
   tags,
   stargazers_count,
   addTag,
   deleteTag,
   index,
+  id,
 }) => {
   function calcDate(data) {
     const now = new Date();
@@ -38,6 +38,7 @@ const Repositorie = ({
             deleteTag={deleteTag}
             addTag={addTag}
             index={index}
+            id={id}
           />
         }
       </ul>

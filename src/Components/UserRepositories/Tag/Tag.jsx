@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Tag.module.css";
 import TagModal from "./TagModal";
 
-const Tag = ({ tags, addTag, deleteTag, index }) => {
+const Tag = ({ tags, addTag, deleteTag, index, id }) => {
   const [tagList, setTagList] = React.useState([]);
   const [modal, setModal] = React.useState(false);
 
@@ -39,6 +39,7 @@ const Tag = ({ tags, addTag, deleteTag, index }) => {
           deleteTag={deleteTag}
           addTag={addTag}
           index={index}
+          id={id}
         />
       )}
     </>

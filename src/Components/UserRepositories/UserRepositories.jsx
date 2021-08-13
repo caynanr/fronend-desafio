@@ -81,15 +81,26 @@ const UserRepositories = () => {
     } else return setFilter(repositories);
   }
 
-  function addTag(i, tag) {
-    const tags = repositories[i].tags;
-    repositories[i].tags = [...tags, ...tag];
-    setRepositories([...repositories]);
+  function addTag(repoId, tag) {
+    const newRepositories = repositories.map((repo) => {
+      if (repo.id === repoId) return { ...repo, tags: [...repo.tags, ...tag] };
+
+      return repo;
+    });
+
+    setRepositories(newRepositories);
   }
 
-  function deleteTag(index, i) {
-    repositories[index].tags.splice(i, 1);
-    setRepositories([...repositories]);
+  function deleteTag(repoId, i) {
+    const newRepositories = repositories.map((repo) => {
+      if (repo.id === repoId) {
+        repo.tags.splice(i, 1);
+        return { ...repo, tags: [...repo.tags] };
+      }
+
+      return repo;
+    });
+    setRepositories(newRepositories);
   }
 
   return (
