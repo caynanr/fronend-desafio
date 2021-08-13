@@ -87,7 +87,6 @@ const UserRepositories = () => {
 
       return repo;
     });
-
     setRepositories(newRepositories);
   }
 
@@ -95,7 +94,7 @@ const UserRepositories = () => {
     const newRepositories = repositories.map((repo) => {
       if (repo.id === repoId) {
         repo.tags.splice(i, 1);
-        return { ...repo, tags: [...repo.tags] };
+        return { ...repo };
       }
 
       return repo;
