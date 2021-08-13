@@ -8,7 +8,7 @@ const Users = () => {
 
   React.useEffect(() => {
     const getUsers = JSON.parse(window.localStorage.getItem("users"));
-    if (getUsers.length) setUsers(getUsers);
+    getUsers !== null ? setUsers(getUsers) : setUsers([]);
   }, []);
 
   function handleDeleteUser(index) {
@@ -25,22 +25,23 @@ const Users = () => {
     <>
       <Header button={true} />
       <ul className={styles.users}>
-        {users.map((user, index) => (
-          <User
-            key={user.id}
-            name={user.name}
-            login={user.login}
-            avatar={user.avatar_url}
-            company={user.company}
-            location={user.location}
-            subscriptions={user.subscriptions}
-            setUsers={setUsers}
-            user={users}
-            handleDeleteUser={() => {
-              handleDeleteUser(index);
-            }}
-          />
-        ))}
+        {users &&
+          users.map((user, index) => (
+            <User
+              key={user.id}
+              name={user.name}
+              login={user.login}
+              avatar={user.avatar_url}
+              company={user.company}
+              location={user.location}
+              subscriptions={user.subscriptions}
+              setUsers={setUsers}
+              user={users}
+              handleDeleteUser={() => {
+                handleDeleteUser(index);
+              }}
+            />
+          ))}
       </ul>
     </>
   );
