@@ -1,2 +1,2 @@
-npm i
-npm start
+   **npm install** > Instale as dependências
+    **npm start**  > Execute
